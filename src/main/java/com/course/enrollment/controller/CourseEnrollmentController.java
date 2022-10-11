@@ -29,18 +29,18 @@ public class CourseEnrollmentController {
 		return userobj;
 	}
 
-//	@GetMapping("/loginuser")
-//	public User loginUser(@RequestBody User user) throws Exception {
-//		String userName = user.getUserName();
-//		String tempPass = user.getPassword();
-//		User userobj = null;
-//		if(userName != null && tempPass != null) {
-//			userobj = courseEnrollmentService.fetchUserByUserIdAndPassword(userName, tempPass);
-//		}
-//		if(userobj ==null) {
-//			throw new Exception("Bad Credential");
-//		  }
-//		return userobj;
-//	}
+	@GetMapping("/login")
+	public User loginUser(@RequestBody User user) throws Exception {
+		String userName = user.getUserName();
+		String tempPass = user.getPassword();
+		User userobj = null;
+		if(userName != null && tempPass != null) {
+			userobj = courseEnrollmentService.fetchUserByUserNameAndPassword(userName, tempPass);
+		}
+		if(userobj ==null) {
+			throw new Exception("Bad Credential");
+		  }
+		return userobj;
+	}
 	
 }

@@ -20,7 +20,7 @@ public class CourseEnrollmentService {
 		return repo.findByEmailId(email);
 	}
 
-//	public User fetchUserByUserIdAndPassword(String userName, String password) {
-//		return repo.findByUserIdAndPassword(userName,password);
-//	}
+	public User fetchUserByUserNameAndPassword(String userName, String password) {
+		return repo.findByUserNameAndPassword(userName,password);
+	}
 }
