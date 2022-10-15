@@ -8,6 +8,8 @@ public interface CourseEnrollmentRepository extends JpaRepository<User,Integer>{
 
 	public User findByEmailId(String email);
 
-	public User findByUserNameAndPassword(String userName, String password);
+	public User findByUserIDAndPassword(Integer userID, String password);
+
+	public User findByUserID(Integer userId);
  
 }
