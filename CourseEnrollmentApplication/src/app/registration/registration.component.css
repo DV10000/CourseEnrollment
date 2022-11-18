@@ -1,0 +1,96 @@
+.registrationBox {
+  padding-top: 89px;
+  padding-left: 145px;
+  background-color: #b3ecff;
+  margin-top: 94px;
+  width: 600px;
+  height: 758px;
+  border-radius: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x: hidden;
+}
+
+.div {
+  padding: 15px;
+}
+
+.form {
+  margin-inline: -45px;
+}
+
+.userInput {
+  margin-left: 70px;
+  width: 45%;
+  border: none;
+}
+
+.pswdInput {
+  margin-left: 55px;
+  width: 45%;
+  border: none;
+}
+
+.firstNm {
+  margin-left: 49px;
+  width: 45%;
+  border: none;
+}
+
+.lastNm {
+  margin-left: 47px;
+  width: 45%;
+  border: none;
+}
+
+.dob {
+  margin-left: 34px;
+  width: 188px;
+  width: 45%;
+  border: none;
+}
+
+.emailId {
+  margin-left: 67px;
+  width: 45%;
+  border: none;
+}
+
+.reset {
+  margin-left: 65px;
+  width: 75%;
+}
+
+.submit {
+  margin-left: 140px;
+  width: 62%;
+}
+
+.heading {
+  padding-inline-start: 36%;
+  margin-top: -45px;
+  margin-left: -255px;
+  margin-bottom: 38px;
+}
+
+.backToLogin {
+  padding-inline-start: 60%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.errorMsg {
+  margin-left: 123px;
+}
+
+.admin{
+  margin-left: 3px;
+}
+
+.yes{
+  margin-left: 65px;
+}
+
+.no{
+  margin-left: 18px;
+}

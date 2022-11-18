@@ -1,0 +1,165 @@
+<div class="registrationBox">
+  <div>
+    <h3 class="heading">User Registration</h3>
+  </div>
+  <form #registrationForm="ngForm" (ngSubmit)="registeruser()" class="form">
+    <span class="text-danger">{{ msg }}</span>
+    <div class="div">
+      <label class="label">User Id:</label>
+      <input
+        type="text"
+        class="userInput"
+        name="UserName"
+        required
+        [(ngModel)]="user.userLoginId"
+        #userId="ngModel"
+        [class.is-invalid]="userId.invalid && userId.touched"
+      /><br />
+      <small
+        class="text-danger errorMsg"
+        [class.d-none]="userId.valid || userId.untouched"
+        >User Id is required.</small
+      >
+    </div>
+
+    <div class="div">
+      <label class="label">Password:</label>
+      <input
+        type="password"
+        class="pswdInput"
+        name="password"
+        required
+        [(ngModel)]="user.password"
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+      /><br />
+      <small
+        class="text-danger errorMsg"
+        [class.d-none]="password.valid || password.untouched"
+        >Password is required.</small
+      >
+    </div>
+
+    <div class="div">
+      <label class="label">First name:</label>
+      <input
+        type="text"
+        class="firstNm"
+        name="firstNm"
+        required
+        [(ngModel)]="user.firstName"
+        #firstNm="ngModel"
+        [class.is-invalid]="firstNm.invalid && firstNm.touched"
+      /><br />
+      <small
+        class="text-danger errorMsg"
+        [class.d-none]="firstNm.valid || firstNm.untouched"
+        >First Name is required.</small
+      >
+    </div>
+
+    <div class="div">
+      <label class="label">Last Name:</label>
+      <input
+        type="text"
+        class="lastNm"
+        name="lastNm"
+        required
+        [(ngModel)]="user.lastName"
+        #lastNm="ngModel"
+        [class.is-invalid]="lastNm.invalid && lastNm.touched"
+      /><br />
+      <small
+        class="text-danger errorMsg"
+        [class.d-none]="lastNm.valid || lastNm.untouched"
+        >Last Name is required.</small
+      >
+    </div>
+
+    <div class="div">
+      <label class="label">Date of Birth:</label>
+      <input
+        type="date"
+        class="dob"
+        name="dob"
+        required
+        [(ngModel)]="user.dob"
+        #dob="ngModel"
+        [class.is-invalid]="dob.invalid && dob.touched"
+        max="{{ maxDate }}"
+      /><br />
+      <small
+        class="text-danger errorMsg"
+        [class.d-none]="dob.valid || dob.untouched"
+        >Date of Birth is required.</small
+      >
+    </div>
+
+    <div class="div">
+      <label class="label">Email Id:</label>
+      <input
+        type="email"
+        class="emailId"
+        name="emailId"
+        [(ngModel)]="user.emailId"
+        #emailId="ngModel"
+        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        required
+        [class.is-invalid]="emailId.invalid && emailId.touched"
+      /><br />
+      <div *ngIf="emailId.errors && emailId.invalid && emailId.touched">
+        <small class="text-danger errorMsg" *ngIf="emailId.errors?.['required']"
+          >Email Id is required.</small
+        >
+        <small class="text-danger errorMsg" *ngIf="emailId.errors?.['pattern']"
+          >Enter the valid Email Id.</small
+        >
+      </div>
+    </div>
+    <br />
+
+    <div class="div">
+      <label class="label" class="admin">ADMIN:</label>
+      <input
+        [(ngModel)]="answer"
+        type="radio"
+        id="yes"
+        name="fav_language"
+        value="True"
+        class="yes"
+      />
+      <label for="html">YES</label>
+       <input
+        [(ngModel)]="answer"
+        type="radio"
+        id="css"
+        name="fav_language"
+        value="False"
+        class="no"
+      />
+      <label for="css">NO</label>
+    </div>
+    <br />
+
+    <tr>
+      <td>
+        <button
+          [disabled]="!registrationForm.valid"
+          type="submit"
+          class="btn btn-info submit"
+        >
+          Submit
+        </button>
+      </td>
+      <td>
+        <button type="reset" class="btn btn-info reset" (click)="resetScreen()">
+          Reset
+        </button>
+      </td>
+    </tr>
+    <br /><br /><br />
+    <small (click)="backToLogin()" class="backToLogin"
+      >Back To Login Page</small
+    >
+  </form>
+</div>

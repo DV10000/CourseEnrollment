@@ -1,0 +1,74 @@
+.loginBox {
+  padding-top: 90px;
+  padding-left: 145px;
+  background-color: #b3ecff;
+  margin-top: 165px;
+  width: 600px;
+  height: 434px;
+  border-radius: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.login-user {
+  padding-inline-start: 35%;
+  float: left;
+  margin-top: 35px;
+  margin-left: 225px;
+}
+
+.div {
+  margin: 3px;
+}
+
+.label {
+  display: inline-block;
+  width: 100px;
+}
+
+.input {
+  margin: 30px;
+  width: 260px;
+  border: none;
+}
+
+.input_pswd {
+  margin-left: 60px;
+  width: 260px;
+  border: none;
+}
+
+.newUserLink {
+  margin-left: 128px;
+  cursor: pointer;
+}
+
+.forgotPswd {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.login {
+  margin-left: 128px;
+  margin-top: 42px;
+  width: 50%;
+}
+.form {
+  margin-inline: -50px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.invalidId {
+  color: red;
+  float: left;
+  margin-top: -30px;
+  margin-left: 130px;
+}
+
+.invalidPassword {
+  margin-left: 130px;
+  color: red;
+}

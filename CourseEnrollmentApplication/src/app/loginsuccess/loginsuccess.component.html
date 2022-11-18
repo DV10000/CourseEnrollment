@@ -1,0 +1,71 @@
+<html>
+  <body class="homepage">
+    <p class="name">{{currentUser.userLoginId}}</p>
+    <a (click)="logout()" class="logout">Logout</a>
+    <div class="tab">
+      <button type="button" class="btn disabledBtn" disabled></button>
+      <button
+        type="button"
+        class="btn course-button"
+        id="course"
+        (click)="tabChange('course')"
+        (click)="reload()"
+      >
+        Courses
+      </button>
+      <button
+        type="button"
+        class="btn enrolled-button"
+        id="enrolledCourse"
+        (click)="tabChange('enrolledCourse')"
+      >
+        Enrolled Courses
+      </button>
+      <button
+        type="button"
+        class="btn add-button"
+        id="addCourse"
+        (click)="tabChange('addCourse')"
+        *ngIf="adminStatus()"
+      >
+        Add Courses
+      </button>
+      <span *ngIf="!adminStatus()" class="optional" ></span>
+      <br />
+
+      <div class="content">
+        <select class="dropdown">
+          <option>Select</option>
+          <option value="course" *ngFor="let data of allCategory" [value]="data.Id">{{data.courseName}}</option>
+        </select>
+
+        <br /><br />
+        <div>
+          <div class="courseData">
+          <p *ngFor="let data of allCourses" class="data">
+            <br>
+            <span class="coursename">Course Name: {{ data.course_name }}</span>
+            <span class="status">{{ data.status }}</span
+            ><br /><br />
+            <span class="author">Author: {{ data.course_author }}</span>
+            <span class="createdDate"
+              >Created Date: {{ data.course_creationDate }}</span
+            >
+            <button type="submit" class="enrollButtonEnable" (click)="enrollCourse(data)" *ngIf="!buttonDisableFlag">Enroll</button>
+            <button type="submit" class="enrollButtonDisable" (click)="enrollCourse(data)" *ngIf="buttonDisableFlag" disabled>Enroll</button>
+            <span class="break"> </span>
+          </p>
+        </div>
+        </div>
+
+        <div class="content-value" *ngIf="id === 'enrolledCourse'">
+          <h2>Get the enrolled courses here</h2>
+        </div>
+
+        <div class="content-value" *ngIf="id === 'addCourse'">
+          <h2>Add the course here</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

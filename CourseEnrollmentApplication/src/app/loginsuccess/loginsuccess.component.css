@@ -1,0 +1,174 @@
+.homepage {
+  background-color: #cff9ff;
+  padding-bottom: 969px;
+  width: 4430%;
+  position: fixed;
+}
+.course-button {
+  border-radius: inherit;
+  border-color: white;
+  width: 510px;
+  margin-top: -25px;
+  height: 113px;
+  background-color: #8ad6ed;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.enrolled-button {
+  border-radius: inherit;
+  border-color: white;
+  width: 510px;
+  margin-top: -25px;
+  height: 113px;
+  background-color: #8ad6ed;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.add-button {
+  border-radius: inherit;
+  border-color: white;
+  width: 510px;
+  margin-top: -25px;
+  height: 113px;
+  background-color: #8ad6ed;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.disabledBtn {
+  height: 113px;
+  border-radius: inherit;
+  border-color: white;
+  margin-left: -56px;
+  width: 160px;
+  margin-top: -25px;
+  background-color: #8ad6ed;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+button:focus {
+  background-color: #33b6f2;
+  color: white;
+}
+
+.dropdown {
+  margin-left: 86%;
+  margin-top: 15px;
+  position:fixed
+}
+
+.tab {
+  padding-left: 105px;
+  padding-top: 45px;
+  position: fixed;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.courseData {
+  /* background-color: #8ad6ed; */
+  height: 90px;
+  margin-left: -54px;
+  width: 91%;
+  position: fixed;
+}
+
+.coursename {
+  font-weight: 500;
+  font-size: larger;
+  margin-left: 15px;
+  position: fixed;
+}
+
+.status {
+  margin-left: 77%;
+  font-size: x-large;
+  font-weight: 500;
+  position: fixed;
+  margin-top: -16px;
+}
+
+.enrollButtonEnable {
+  margin-left: 77%;
+  width: 200px;
+  position: fixed;
+  font-size: large;
+  background-color: #33b6f2;
+  color: white;
+  border: none;
+  border-radius: inherit;
+  height: 34px;
+  margin-top: -9px;
+}
+
+.author {
+  font-weight: 500;
+  font-size: larger;
+  margin-left: 15px;
+  position: fixed;
+  margin-top: -9px;
+}
+
+.createdDate {
+  margin-left: 32%;
+  font-weight: 500;
+  font-size: large;
+  position: fixed;
+  margin-top: -9px;
+}
+
+.break {
+  background-color: black;
+}
+
+.optional {
+  border-radius: inherit;
+  border-color: white;
+  width: 510px;
+  margin-top: -25px;
+  height: 113px;
+  background-color: #cff9ff;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.logout {
+  color: var(--bs-link-color);
+  text-decoration: underline;
+  margin-left: 94%;
+  position: fixed;
+}
+
+.userName {
+  margin-left: 1805px;
+}
+
+.data{
+  background-color: #8ad6ed;
+  height: 117%;
+}
+
+.name{
+  color: var(--bs-link-color);
+  margin-left: 1742px;
+}
+
+.enrollButtonDisable{
+  margin-left: 77%;
+  width: 200px;
+  position: fixed;
+  font-size: large;
+  background-color: #398ea8;
+  color: white;
+  border: none;
+  border-radius: inherit;
+  height: 34px;
+  margin-top: -9px;
+}
+
+

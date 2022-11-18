@@ -1,0 +1,61 @@
+<h3 class="login-user">Login</h3>
+<div class="loginBox">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="form">
+    <span class="text-danger">{{ msg }}</span>
+    <div class="div">
+      <label class="label">User Id:</label>
+      <input
+        type="text"
+        class="input"
+        name="UserName"
+        [(ngModel)]="user.userLoginId"
+        required
+        #userId="ngModel"
+      /><br />
+      <small
+        class="help-block invalidId"
+        *ngIf="!userId.valid && userId.touched"
+        >Please enter valid User ID!</small
+      >
+    </div>
+
+    <div class="div">
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        class="input_pswd"
+        name="password"
+        [(ngModel)]="user.password"
+        required
+        #pswd="ngModel"
+        onpaste="return false;"
+        oncopy="return false;"
+      /><br />
+      <small
+        class="help-block invalidPassword"
+        *ngIf="!pswd.valid && pswd.touched"
+        >Please enter valid Password!</small
+      ><br />
+      <tr>
+        <td>
+          <p>
+            <a class="newUserLink" (click)="gotoregistration()"
+              >New User?Register</a
+            >
+          </p>
+        </td>
+        <td>
+          <a class="forgotPswd" (click)="forgotPassword()">Forgot Password</a>
+        </td>
+      </tr>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="!loginForm.valid"
+      class="btn btn-info login"
+    >
+      Login
+    </button>
+  </form>
+</div>
